@@ -20,12 +20,6 @@ html {
 
 /* Utilidades */
 
-.no-margin {
-    margin: 0;
-}
-.no-padding {
-    padding: 0;
-}
 .centrar-texto {
     text-align: center;
 }

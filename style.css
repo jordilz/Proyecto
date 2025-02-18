@@ -22,14 +22,10 @@ html {
 }
 
 /* Utilidades */
-
-
 .centrar-texto {
   text-align: center;
 }
-
 /* globales */
-
 a {
   text-decoration: none;
 }
@@ -68,7 +64,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 /* Header */
 .barra {
   display: flex;

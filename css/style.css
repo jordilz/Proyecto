@@ -26,6 +26,7 @@ html {
 .centrar-texto {
   text-align: center;
 }
+
 /* globales */
 
 a {
@@ -71,6 +72,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 /* Header */
 
 .barra {
@@ -96,17 +98,17 @@ body {
   font-family: var(--fuentePrincipal);
 }
 
-.logo__nombre {
+.logo_nombre {
   display: flex;
   align-items: center;
   font-size: 2rem;
   color: var(--primario);
 }
 
-.logo__img {}
+.logo_img {}
 
-.logo__nombre,
-.logo__img {
+.logo_nombre,
+.logo_img {
   display: flex;
   justify-content: center;
   margin: 1rem;
@@ -145,8 +147,8 @@ body {
     width: 20%;
   }
 
-  .logo__nombre,
-  .logo__img {
+  .logo_nombre,
+  .logo_img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,8 +161,8 @@ body {
 
   }
 
-  .navegacion__enlace,
-  .buscador__formulario {
+  .navegacion_enlace,
+  .buscador_formulario {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,7 +181,7 @@ body {
 
 }
 
-.navegacion__enlace--carrito {
+.navegacion_enlace_carrito {
   width: 3rem;
   height: auto;
 }
@@ -187,7 +189,7 @@ body {
 @media (min-width: 768px) {
 
   .navegacion,
-  .buscador__formulario {
+  .buscador_formulario {
     display: flex;
     gap: 1rem;
   }
@@ -204,7 +206,7 @@ body {
 }
 
 /* Estilo del input de búsqueda */
-.buscador__formulario {
+.buscador_formulario {
   display: flex;
   align-items: center;
   width: 100%;
@@ -215,7 +217,7 @@ body {
   display: none;
 }
 
-.buscador__formulario input[type="search"] {
+.buscador_formulario input[type="search"] {
   width: 100%;
   padding: 8px 40px 8px 10px;
   /* Espaciado para dar lugar al icono dentro del input */
@@ -228,13 +230,13 @@ body {
   margin-top: 0;
 }
 
-.buscador__formulario input[type="search"]:focus {
+.buscador_formulario input[type="search"]:focus {
   border-color: var(--primario);
   /* Cambiar el color del borde cuando está enfocado */
   outline: none;
 }
 
-.buscador__formulario button {
+.buscador_formulario button {
   position: absolute;
   right: 10px;
   top: 50%;
@@ -245,7 +247,7 @@ body {
   width: 24px;
   /* Tamaño del icono */
   height: 24px;
-  background-image: url('img/lupa.png');
+  background-image: url('../img/lupa.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -262,14 +264,14 @@ body {
   }
 
   /* Estilo del input de búsqueda */
-  .buscador__formulario {
+  .buscador_formulario {
     display: flex;
     align-items: center;
     width: 100%;
 
   }
 
-  .buscador__formulario input[type="search"] {
+  .buscador_formulario input[type="search"] {
     width: 80%;
     padding: 8px 40px 8px 10px;
     font-size: 1.6rem;
@@ -280,13 +282,13 @@ body {
     margin-top: 0;
   }
 
-  .buscador__formulario input[type="search"]:focus {
+  .buscador_formulario input[type="search"]:focus {
     border-color: var(--primario);
     outline: none;
   }
 
   /* Estilo del botón (icono) */
-  .buscador__formulario button {
+  .buscador_formulario button {
     position: absolute;
     right: 13%;
     top: 50%;
@@ -304,9 +306,50 @@ body {
   }
 }
 
-/* Main */
-.main {
-  margin-top: 30rem;
+/* Estilos básicos para el div contacto */
+.contacto {
+  padding: 2rem;
+  margin: 2rem 5%;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* Para pantallas grandes (a partir de 768px en adelante) */
+@media (min-width: 768px) {
+  .contacto {
+    width: 50%;
+    /* El div ocupará el 50% del ancho */
+    margin: 2rem auto;
+    /* Centrado automático */
+    padding: 3rem;
+    /* Aumentamos el padding para pantallas más grandes */
+  }
+}
+
+/* Para pantallas más pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .contacto {
+    width: 90%;
+    /* El div ocupará el 90% del ancho en pantallas pequeñas */
+    margin: 2rem auto;
+    /* Centrado automático */
+    padding: 2rem;
+    /* Padding ajustado para pantallas pequeñas */
+    margin-bottom: 0;
+  }
+}
+
+/* Para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .contacto {
+    width: 95%;
+    /* El div ocupará el 95% del ancho en pantallas muy pequeñas */
+    padding: 1.5rem;
+    /* Padding reducido */
+    font-size: 1.4rem;
+    /* Reducimos el tamaño de la fuente */
+  }
 }
 
 @media (min-width: 768px) {
@@ -351,14 +394,14 @@ body {
   position: relative;
 }
 
-.seccion__imagen {
+.seccion_imagen {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 1.2rem;
 }
 
-.seccion__texto {
+.seccion_texto {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -379,20 +422,20 @@ body {
   margin: 7rem 0;
 }
 
-.peliculas__contenido {
+.peliculas_contenido {
   display: flex;
   flex-direction: column;
   position: relative;
   text-align: center;
 }
 
-.peliculas__contenido--imagen {
+.peliculas_contenido_imagen {
   width: 100vw;
   height: auto;
   margin-bottom: 2rem;
 }
 
-.peliculas__contenido--texto {
+.pelicula_contenido_texto {
   display: block;
   margin: 0 2rem;
 }
@@ -403,22 +446,22 @@ body {
     margin: 7rem 0;
   }
 
-  .peliculas__contenido {
+  .peliculas_contenido {
     display: flex;
     flex-direction: column;
     position: relative;
     text-align: center;
   }
 
-  .peliculas__contenido--imagen {
-    width: 100vw;
+  .peliculas_contenido_imagen {
+    max-width: 100%;
     height: auto;
     display: block;
     margin-bottom: 10rem;
 
   }
 
-  .peliculas__contenido--texto {
+  .peliculas_contenido_texto {
     position: absolute;
     top: 17%;
     left: 10%;
@@ -429,7 +472,7 @@ body {
     text-align: left;
   }
 
-  .peliculas__contenido--titulo {
+  .peliculas_contenido_titulo {
     z-index: 10;
     position: absolute;
     top: 7%;
@@ -441,7 +484,7 @@ body {
 /* footer */
 
 
-.grid__footer {
+.grid_footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -455,7 +498,7 @@ body {
   /* Ancho ajustado para mantener el contenido centrado */
 }
 
-.grid__footer h1 {
+.grid_footer h1 {
   margin-left: 0;
   padding-left: 0;
   justify-content: center;
@@ -470,10 +513,13 @@ body {
   color: var(--blanco);
   width: 100%;
   /* El formulario ocupa todo el ancho disponible */
+  margin: 0;
+  padding: 0;
 }
 
-.footer__formulario {
+.footer_formulario {
   margin: 2rem auto;
+  margin-bottom: 0;
   /* Asegura que el formulario tenga un margen adecuado */
   width: 80%;
   /* Puedes ajustar el ancho del formulario */
@@ -490,7 +536,7 @@ body {
   color: var(--blanco);
 }
 
-.formulario__campo {
+.formulario_campo {
   width: 100%;
   height: 3rem;
   margin: 1rem 0;
@@ -512,9 +558,54 @@ li {
   align-items: center;
 }
 
-.footer__contacto {
+.footer_contacto {
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer_contacto {
+    padding: 1rem 10px;
+    margin-top: 55px;
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .footer_formulario {
+    width: 90%;
+    /* El formulario ocupa el 90% del ancho */
+    padding: 1rem;
+  }
+
+  /* Ajustar los campos del formulario para que ocupen el 100% */
+  .formulario_campo,
+  .formulario textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_contacto {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .footer_formulario {
+    width: 95%;
+    /* El formulario ocupa el 95% del ancho */
+    padding: 1rem;
+  }
+
+  /* Ajustar los campos del formulario para que sean más grandes en dispositivos pequeños */
+  .formulario_campo,
+  .formulario textarea {
+    font-size: 1.4rem;
+    /* Aumentar el tamaño de la fuente para una mejor legibilidad */
+    padding: 1.2rem;
+  }
 }
 
 .campo {
@@ -522,12 +613,12 @@ li {
   font-size: 1.5rem;
 }
 
-.campo__texto {
+.campo_texto {
   color: var(--blanco);
   font-size: 1.5rem;
 }
 
-.footer__terminos {
+.footer_terminos {
   background-color: var(--gris);
   font-family: var(--fuentePrincipal);
   text-align: center;
@@ -541,7 +632,7 @@ li {
   align-content: center;
 }
 
-.footer__terminos p {
+.footer_terminos p {
   color: var(--blanco);
   font-size: 1.5rem;
   margin: 2.5rem;
@@ -551,7 +642,7 @@ li {
 
 @media (min-width: 768px) {
 
-  .grid__footer {
+  .grid_footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -562,7 +653,31 @@ li {
     width: 50%;
   }
 
-  .grid__footer h1 {
+  /* Para pantallas más grandes (por ejemplo, tablets y pantallas de escritorio) */
+  @media (min-width: 768px) {
+    .grid_footer {
+      grid-template-columns: repeat(2, 1fr);
+      /* Cambiar a 2 columnas en pantallas medianas */
+      gap: 3rem;
+      /* Aumentar el espacio entre los elementos */
+      width: 80%;
+      /* Reducir el ancho del grid para pantallas más grandes */
+    }
+  }
+
+  /* Para pantallas más grandes (por ejemplo, pantallas de escritorio) */
+  @media (min-width: 1024px) {
+    .grid_footer {
+      grid-template-columns: repeat(3, 1fr);
+      /* Cambiar a 3 columnas en pantallas grandes */
+      gap: 4rem;
+      /* Aumentar más el espacio entre los elementos */
+      width: 70%;
+      /* Reducir aún más el ancho del grid */
+    }
+  }
+
+  .grid_footer h1 {
     margin-left: 0;
     padding-left: 0;
     justify-content: left;
@@ -586,7 +701,7 @@ li {
     color: var(--blanco);
   }
 
-  .formulario__campo {
+  .formulario_campo {
     width: 100%;
     height: 3rem;
     margin: 1rem 0;
@@ -611,22 +726,61 @@ li {
     font-size: 1.5rem;
   }
 
-  .campo__texto {
+  .campo_texto {
     color: var(--blanco);
     font-size: 1.5rem;
   }
 
+  /*boton enviar*/
+  .btn_enviar{
+    background-color: #FA8232;
+    /* Color de fondo naranja */
+    color: white;
+    /* Color del texto en blanco */
+    font-size: 1.6rem;
+    /* Tamaño de la fuente */
+    padding: 1rem 2rem;
+    /* Espaciado alrededor del texto */
+    border: none;
+    /* Eliminar el borde */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar el cursor a una mano */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Efecto de transición */
+  }
+
+  .btn_enviar:hover {
+    background-color: #d86a2f;
+    /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    /* Agrandar ligeramente el botón cuando pasa el ratón */
+  }
+
+  .btn_enviar:focus {
+    outline: none;
+    /* Eliminar el contorno del botón cuando es enfocado */
+  }
+
+  .btn_enviar:active {
+    transform: scale(0.98);
+    /* Efecto de "presionar" el botón */
+  }
+
+
   .main {
-    min-height: calc(100vh - 10rem); 
+    margin-top: 30rem;
+    min-height: calc(100vh - 10rem);
     display: flex;
     flex-direction: column;
-}
+  }
 
-.footer {
+  .footer {
     margin-top: auto;
-}
+  }
 
-.footer__terminos {
+  .footer_terminos {
     background-color: var(--gris);
     font-family: var(--fuentePrincipal);
     text-align: center;
@@ -634,10 +788,10 @@ li {
     height: 10rem;
     margin: 0;
     padding: 0;
-}
+  }
 
 
-  .footer__terminos p {
+  .footer_terminos p {
     color: var(--blanco);
     font-size: 1.5rem;
     margin: 2.5rem;

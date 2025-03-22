@@ -11,33 +11,35 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="index.html">
+            <h1 class="logo__nombre"><span><img class="logo__img" src="img/icono_logo.png" alt="logo pagina"></span>KŌDO
+              NYŪSU</h1>
+          </a>
+          <div class="buscador">
+            <form class="buscador__formulario" method="get">
+              <input type="search" name="buscador" id="buscador-input" placeholder="Buscar">
+              <button type="submit" aria-label="Buscar"></button>
+            </form>
+          </div>
+          <div class="navegacion"> <!--de momento dejamos en nombre de navegacion-->
+            <a href="#" class="navegacion__enlace">
+              <img class="navegacion__enlace--carrito" src="img/icono_carrito_blanco.png" alt="icono carrito">
+            </a>
+            <a href="#" class="navegacion__enlace">
+              <img class="navegacion__enlace--perfil" src="img/icono_usuario.png" alt="icono perfil">
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
 </head>
 
 <body>
-  <header class="header">
-    <div class="contenedor">
-      <div class="barra">
-        <a class="logo" href="index.html">
-          <h1 class="logo__nombre"><span><img class="logo__img" src="img/icono_logo.png" alt="logo pagina"></span>KŌDO
-            NYŪSU</h1>
-        </a>
-        <div class="buscador">
-          <form class="buscador__formulario" method="get">
-            <input type="search" name="buscador" id="buscador-input" placeholder="Buscar">
-            <button type="submit" aria-label="Buscar"></button>
-          </form>
-        </div>
-        <div class="navegacion"> <!--de momento dejamos en nombre de navegacion-->
-          <a href="#" class="navegacion__enlace">
-            <img class="navegacion__enlace--carrito" src="img/icono_carrito_blanco.png" alt="icono carrito">
-          </a>
-          <a href="#" class="navegacion__enlace">
-            <img class="navegacion__enlace--perfil" src="img/icono_usuario.png" alt="icono perfil">
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+
 
   <main class="main">
     <div class="grid">
@@ -93,46 +95,8 @@
   </main>
 
   <footer class="footer">
-    <div class="grid__footer">
-      <div class="footer__contacto">
-        <ul>
-          <li>
-            <h1 class="logo__nombre">KŌDO NYŪSU</h1>
-          </li>
-          <li>
-            <p class="campo">Telefono de contacto: </p>
-            <p class="campo__texto">934859333</p>
-          </li>
-          <li>
-            <p class="campo">Direccion:</p>
-            <p class="campo__texto">Calle las flores 64, Barcelona, 03945</p>
-          </li>
-          <li>
-            <p class="campo">Correo Electronico:</p>
-            <p class="campo__texto">info@kodoNyusu.com</p>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__formulario">
-        <form class="formulario">
-          <ul>
-            <li>
-              <label class="campo" for="nombre">Nombre</label>
-              <input class="formulario__campo" type="text" name="nombre_usuario" id="nombre" required>
-            </li>
-            <li>
-              <label class="campo" for="correo">Correo Electronico</label>
-              <input class="formulario__campo" type="email" name="correo_usuario" id="correo" required>
-            </li>
-            <li>
-              <label class="campo" for="mensaje">Mensaje</label>
-              <textarea name="mensaje_usuario" id="mensaje" required></textarea>
-            </li>
-          </ul>
-        </form>
-      </div>
-    </div>
     <div class="footer__terminos">
+      <a href="contacto.html">CONTACTA CON NOSOTROS</a>
       <p>TERMINOS Y CONDICIONES</p>
     </div>
   </footer>

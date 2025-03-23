@@ -5,7 +5,7 @@
   --gris: #191C1F;
   --grisClaro: #77878F;
   --grisTransparente: rgba(25, 28, 31, 0.9);
-  --fuentePrincipal: "Public Sans", serif;
+  --fuentePrincipal: "Public Sans", sans-serif;
 }
 
 html {
@@ -414,19 +414,24 @@ body {
   height: auto;
   display: block;
   border-radius: 1.2rem;
+  opacity: 0.5;
+}
+
+.seccion_imagen:hover {
+  opacity: 1; /* Opacidad al pasar el ratón */
 }
 
 .seccion_texto {
   position: absolute;
-  top: 80%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* Ajusta el texto para que esté centrado perfectamente */
   color: var(--blanco);
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   text-align: center;
   background-color: var(--primario);
-  padding: 10px;
+  padding: 12px;
   font-family: var(--fuentePrincipal);
   border-radius: 1.2rem;
 }
@@ -501,7 +506,7 @@ body {
   flex-direction: column;
   align-items: center; 
   text-align: center; 
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--blanco);
   width: 100%;
   margin: 0;
@@ -527,16 +532,21 @@ body {
   margin-bottom: 1.5rem; 
 }
 
+.campo {
+  font-family: sans-serif;
+}
+
 .formulario textarea,
 .formulario_campo {
+  font-family: sans-serif;
   width: 100%;
   padding: 1rem;
   margin: 0.5rem 0;
-  border-radius: 1rem;
-  border: 1px solid var(--grisClaro);
+  border-radius: 0.7rem;
+  border: 0.8px solid var(--grisClaro);
   background-color: var(--gris);
   color: var(--blanco);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .formulario textarea {
@@ -554,7 +564,7 @@ body {
   border: none;
   border-radius: 1rem;
   color: var(--blanco);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   margin-top: 1rem;
 }
@@ -565,7 +575,7 @@ body {
 
 .campo {
   color: var(--grisClaro);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .campo_texto {
@@ -692,3 +702,17 @@ body {
 
 }
 
+.contacto_titulo {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+.error {
+    font-family: sans-serif;
+    color: red;
+    font-size: 0.9em;
+  }

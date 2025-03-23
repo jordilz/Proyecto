@@ -17,7 +17,7 @@
   <header class="header">
     <div class="contenedor">
       <div class="barra">
-        <a class="logo" href="index.html">
+        <a class="logo" href="/index.html">
           <h1 class="logo_nombre"><span><img class="logo_img" src="../../img/icono_logo.png" alt="logo pagina"></span>KŌDO
             NYŪSU</h1>
         </a>
@@ -38,28 +38,76 @@
       </div>
     </div>
   </header>
-    <div class="contacto_formulario">
-      <form class="formulario">
-        <ul>
-          <li>
-            <label class="campo" for="nombre">Nombre</label>
-            <input class="formulario_campo" type="text" name="nombre_usuario" id="nombre" required>
-          </li>
-          <li>
-            <label class="campo" for="correo">Correo Electronico</label>
-            <input class="formulario_campo" type="email" name="correo_usuario" id="correo" required>
-          </li>
-          <li>
-            <label class="campo" for="mensaje">Mensaje</label>
-            <textarea name="mensaje_usuario" id="mensaje" required></textarea>
-          </li>
-        </ul>
-        <button type="submit" class="btn_enviar">Enviar</button>
-      </form>
-    </div>
+
+  <div class="contacto_formulario">
+    <div class="contacto_titulo">Contacta con nosotros:</div>
+    <form class="formulario" id="contactoForm">
+      <ul>
+        <li>
+          <label class="campo" for="nombre">Nombre</label>
+          <input class="formulario_campo" type="text" name="nombre_usuario" id="nombre" required>
+          <span class="error" id="errorNombre"></span>
+        </li>
+        <li>
+          <label class="campo" for="correo">Correo Electrónico</label>
+          <input class="formulario_campo" type="email" name="correo_usuario" id="correo" required>
+          <span class="error" id="errorCorreo"></span>
+        </li>
+        <li>
+          <label class="campo" for="mensaje">Mensaje</label>
+          <textarea name="mensaje_usuario" id="mensaje" required></textarea>
+          <span class="error" id="errorMensaje"></span>
+        </li>
+      </ul>
+      <button type="submit" class="btn_enviar">Enviar</button>
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById("contactoForm").addEventListener("submit", function(event) {
+      let isValid = true;
+  
+      let nombre = document.getElementById("nombre").value;
+      let errorNombre = document.getElementById("errorNombre");
+      if (nombre.length < 3) {
+        errorNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
+        isValid = false;
+      } else {
+        errorNombre.textContent = "";
+      }
+  
+      let correo = document.getElementById("correo").value;
+      let errorCorreo = document.getElementById("errorCorreo");
+      let correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!correoRegex.test(correo)) {
+        errorCorreo.textContent = "Ingrese un correo electrónico válido.";
+        isValid = false;
+      } else {
+        errorCorreo.textContent = "";
+      }
+  
+      let mensaje = document.getElementById("mensaje").value;
+      let errorMensaje = document.getElementById("errorMensaje");
+      if (mensaje.length < 10) {
+        errorMensaje.textContent = "El mensaje debe tener al menos 10 caracteres.";
+        isValid = false;
+      } else {
+        errorMensaje.textContent = "";
+      }
+  
+      if (!isValid) {
+        event.preventDefault(); 
+      }
+    });
+
+    errorMensaje.style.color = "red";
+    errorNombre.syle.color = "red";
+
+  </script>
+
   <footer class="footer">
     <div class="footer_terminos">
-      <p><a href="../../index.html">HOME</a></p>
+      <p><a href="contacto.html">CONTACTA CON NOSOTROS</a></p>
       <p><a href="index.html">TERMINOS Y CONDICIONES</a></p>
     </div>
   </footer>

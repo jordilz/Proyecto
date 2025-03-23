@@ -191,7 +191,7 @@ body {
   .navegacion,
   .buscador_formulario {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -238,15 +238,15 @@ body {
 
 .buscador_formulario button {
   position: absolute;
-  right: 10px;
+  right: 13%;
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  width: 24px;
+  width: 14px;
   /* Tamaño del icono */
-  height: 24px;
+  height: 14px;
   background-image: url('../img/lupa.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -288,6 +288,7 @@ body {
   }
 
   /* Estilo del botón (icono) */
+ 
   .buscador_formulario button {
     position: absolute;
     right: 13%;
@@ -296,15 +297,18 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
-    background-image: url('img/lupa.png');
+    width: 14px;
+    /* Tamaño del icono */
+    height: 14px;
+    background-image: url('../img/lupa.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     padding: 0;
   }
+ 
 }
+
 
 /* Estilos básicos para el div contacto */
 .contacto {
@@ -314,7 +318,13 @@ body {
   color: white;
   text-align: center;
 }
-
+.contacto_lista{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
 /* Para pantallas grandes (a partir de 768px en adelante) */
 @media (min-width: 768px) {
   .contacto {
@@ -337,7 +347,9 @@ body {
     padding: 2rem;
     /* Padding ajustado para pantallas pequeñas */
     margin-bottom: 0;
+    
   }
+  
 }
 
 /* Para pantallas muy pequeñas (menos de 480px) */
@@ -349,7 +361,9 @@ body {
     /* Padding reducido */
     font-size: 1.4rem;
     /* Reducimos el tamaño de la fuente */
+    margin: 2rem auto;
   }
+  
 }
 
 @media (min-width: 768px) {
@@ -357,6 +371,7 @@ body {
     margin-top: 20rem;
   }
 }
+
 
 /* Grid */
 
@@ -415,8 +430,6 @@ body {
   font-family: var(--fuentePrincipal);
   border-radius: 1.2rem;
 }
-
-
 
 .apartados {
   margin: 7rem 0;
@@ -481,83 +494,124 @@ body {
 }
 
 
-/* footer */
+/* Contacto.html */
 
-
-.grid_footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-  justify-items: center;
-  /* Asegura que los elementos dentro del grid estén centrados */
-  margin: 2rem auto;
-  /* Centrado horizontal */
-  text-align: center;
-  width: 90%;
-  /* Ancho ajustado para mantener el contenido centrado */
-}
-
-.grid_footer h1 {
-  margin-left: 0;
-  padding-left: 0;
-  justify-content: center;
-}
-
-.formulario {
+.contacto_formulario {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* Asegura que los elementos dentro del formulario estén centrados */
+  align-items: center; 
+  text-align: center; 
   font-size: 1.8rem;
   color: var(--blanco);
   width: 100%;
-  /* El formulario ocupa todo el ancho disponible */
   margin: 0;
   padding: 0;
+  height: 100vh; 
+  justify-content: center; 
 }
 
-.footer_formulario {
-  margin: 2rem auto;
-  margin-bottom: 0;
-  /* Asegura que el formulario tenga un margen adecuado */
-  width: 80%;
-  /* Puedes ajustar el ancho del formulario */
-}
-
-.formulario textarea {
-  width: 100%;
-  height: 12rem;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 1rem;
-  border: 1px solid var(--grisClaro);
-  background-color: var(--gris);
-  color: var(--blanco);
-}
-
-.formulario_campo {
-  width: 100%;
-  height: 3rem;
-  margin: 1rem 0;
-  border-radius: 1rem;
-  border: 1px solid var(--grisClaro);
-  background-color: var(--gris);
-  color: var(--blanco);
-}
-
-.formulario ul,
-li {
-  list-style-type: none;
-  width: 80%;
-  /* Asegura que la lista no sobresalga del formulario */
+.formulario {
+  width: 90%; 
+  max-width: 600px; 
+  margin: 0;
+  padding: 2rem; 
 }
 
 .formulario ul {
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none; 
 }
 
+.formulario li {
+  margin-bottom: 1.5rem; 
+}
+
+.formulario textarea,
+.formulario_campo {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  border: 1px solid var(--grisClaro);
+  background-color: var(--gris);
+  color: var(--blanco);
+  font-size: 1.6rem;
+}
+
+.formulario textarea {
+  height: 12rem;
+}
+
+.formulario_campo {
+  height: 3rem;
+}
+
+.btn_enviar {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--grisClaro);
+  border: none;
+  border-radius: 1rem;
+  color: var(--blanco);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn_enviar:hover {
+  background-color: var(--gris); /* Cambia el color al pasar el ratón */
+}
+
+.campo {
+  color: var(--grisClaro);
+  font-size: 1.5rem;
+}
+
+.campo_texto {
+  color: var(--blanco);
+  font-size: 1.5rem;
+}
+
+
+/*boton enviar*/
+.btn_enviar{
+  background-color: #FA8232;
+  /* Color de fondo naranja */
+  color: white;
+  /* Color del texto en blanco */
+  font-size: 1.6rem;
+  /* Tamaño de la fuente */
+  padding: 1rem 2rem;
+  /* Espaciado alrededor del texto */
+  border: none;
+  /* Eliminar el borde */
+  border-radius: 0.5rem;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambiar el cursor a una mano */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Efecto de transición */
+}
+
+.btn_enviar:hover {
+  background-color: #d86a2f;
+  /* Color más oscuro al pasar el ratón */
+  transform: scale(1.05);
+  /* Agrandar ligeramente el botón cuando pasa el ratón */
+}
+
+.btn_enviar:focus {
+  outline: none;
+  /* Eliminar el contorno del botón cuando es enfocado */
+}
+
+.btn_enviar:active {
+  transform: scale(0.98);
+  /* Efecto de "presionar" el botón */
+}
+
+/* footer */
 .footer_contacto {
   justify-content: center;
   align-items: center;
@@ -572,39 +626,12 @@ li {
     overflow-x: hidden;
   }
 
-  .footer_formulario {
-    width: 90%;
-    /* El formulario ocupa el 90% del ancho */
-    padding: 1rem;
-  }
-
   /* Ajustar los campos del formulario para que ocupen el 100% */
   .formulario_campo,
   .formulario textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer_contacto {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .footer_formulario {
-    width: 95%;
-    /* El formulario ocupa el 95% del ancho */
-    padding: 1rem;
-  }
-
-  /* Ajustar los campos del formulario para que sean más grandes en dispositivos pequeños */
-  .formulario_campo,
-  .formulario textarea {
-    font-size: 1.4rem;
-    /* Aumentar el tamaño de la fuente para una mejor legibilidad */
-    padding: 1.2rem;
   }
 }
 
@@ -627,6 +654,7 @@ li {
   position: relative;
   z-index: 10;
   align-content: center;
+
 }
 
 .footer_terminos p {
@@ -634,162 +662,33 @@ li {
   font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
 
-  .grid_footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem auto;
-    text-align: left;
-    width: 50%;
-  }
-
-  /* Para pantallas más grandes (por ejemplo, tablets y pantallas de escritorio) */
-  @media (min-width: 768px) {
-    .grid_footer {
-      grid-template-columns: repeat(2, 1fr);
-      /* Cambiar a 2 columnas en pantallas medianas */
-      gap: 3rem;
-      /* Aumentar el espacio entre los elementos */
-      width: 80%;
-      /* Reducir el ancho del grid para pantallas más grandes */
-    }
-  }
-
-  /* Para pantallas más grandes (por ejemplo, pantallas de escritorio) */
-  @media (min-width: 1024px) {
-    .grid_footer {
-      grid-template-columns: repeat(3, 1fr);
-      /* Cambiar a 3 columnas en pantallas grandes */
-      gap: 4rem;
-      /* Aumentar más el espacio entre los elementos */
-      width: 70%;
-      /* Reducir aún más el ancho del grid */
-    }
-  }
-
-  .grid_footer h1 {
-    margin-left: 0;
-    padding-left: 0;
-    justify-content: left;
-  }
-
-  .formulario {
-    font-size: 1.8rem;
-    color: var(--blanco);
-    width: 50%;
-    margin: 5rem 3rem;
-  }
-
-  .formulario textarea {
-    width: 35rem;
-    height: 12rem;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 1rem;
-    border: 1px solid var(--grisClaro);
-    background-color: var(--gris);
-    color: var(--blanco);
-  }
-
-  .formulario_campo {
-    width: 100%;
-    height: 3rem;
-    margin: 1rem 0;
-    border-radius: 1rem;
-    border: 1px solid var(--grisClaro);
-    background-color: var(--gris);
-    color: var(--blanco);
-  }
-
-  .formulario ul,
-  li {
-    list-style-type: none;
-    width: 100%;
-  }
-
-  .formulario ul {
-    margin-top: 10rem;
-  }
-
-  .campo {
-    color: var(--grisClaro);
-    font-size: 1.5rem;
-  }
-
-  .campo_texto {
-    color: var(--blanco);
-    font-size: 1.5rem;
-  }
-
-  /*boton enviar*/
-  .btn_enviar{
-    background-color: #FA8232;
-    /* Color de fondo naranja */
-    color: white;
-    /* Color del texto en blanco */
-    font-size: 1.6rem;
-    /* Tamaño de la fuente */
-    padding: 1rem 2rem;
-    /* Espaciado alrededor del texto */
-    border: none;
-    /* Eliminar el borde */
-    border-radius: 0.5rem;
-    /* Bordes redondeados */
-    cursor: pointer;
-    /* Cambiar el cursor a una mano */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Efecto de transición */
-  }
-
-  .btn_enviar:hover {
-    background-color: #d86a2f;
-    /* Color más oscuro al pasar el ratón */
-    transform: scale(1.05);
-    /* Agrandar ligeramente el botón cuando pasa el ratón */
-  }
-
-  .btn_enviar:focus {
-    outline: none;
-    /* Eliminar el contorno del botón cuando es enfocado */
-  }
-
-  .btn_enviar:active {
-    transform: scale(0.98);
-    /* Efecto de "presionar" el botón */
-  }
-
-
-  .main {
-    margin-top: 30rem;
-    min-height: calc(100vh - 10rem);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer {
-    margin-top: auto;
-  }
-
-  .footer_terminos {
-    background-color: var(--gris);
-    font-family: var(--fuentePrincipal);
-    text-align: center;
-    width: 100%;
-    height: 10rem;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  .footer_terminos p {
-    color: var(--blanco);
-    font-size: 1.5rem;
-    margin: 2.5rem;
-    padding: 1rem;
-    margin: 0;
-  }
+.main {
+  margin-top: 30rem;
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
 }
+
+.footer {
+  margin-top: auto;
+}
+
+.footer_terminos {
+  background-color: var(--gris);
+  font-family: var(--fuentePrincipal);
+  text-align: center;
+  width: 100%;
+  height: 10rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer_terminos p {
+  color: var(--blanco);
+  font-size: 1.5rem;
+  align-items: center;
+
+}
+

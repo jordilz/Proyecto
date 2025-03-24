@@ -431,13 +431,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   /* Ajusta el texto para que esté centrado perfectamente */
-  color: var(--blanco);
-  font-size: 2.2rem;
+  color: var(--negro);
+  font-size: 2.1rem;
   text-align: center;
   background-color: var(--primario);
-  padding: 12px;
+  padding: 10px;
   font-family: var(--fuentePrincipal);
   border-radius: 1.2rem;
+  font-weight: bold;
 }
 
 
@@ -741,3 +742,16 @@ body {
     color: red;
     font-size: 0.9em;
   }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  

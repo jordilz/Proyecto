@@ -427,8 +427,8 @@ body {
 
 .seccion_texto {
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 40%;
+  left: 44%;
   transform: translate(-50%, -50%);
   /* Ajusta el texto para que esté centrado perfectamente */
   color: var(--negro);

@@ -407,16 +407,10 @@ body {
 
 .seccion_texto {
   position: absolute;
-<<<<<<< Updated upstream
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* Ajusta el texto para que esté centrado perfectamente */
-=======
-  top: 30%; /* Centrado vertical */
-  left: 45%; /* Centrado horizontal */
-  transform: translate(-50%, -50%); /* Ajuste para centrar perfectamente */
->>>>>>> Stashed changes
   color: var(--blanco);
   font-size: 1.5rem;
   text-align: center;
@@ -426,9 +420,6 @@ body {
   border-radius: 1.2rem;
 }
 
-<<<<<<< Updated upstream
-
-=======
 /* En pantallas más pequeñas (tablet y móvil) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .seccion_texto {
@@ -445,7 +436,6 @@ body {
     font-size: 2.2rem; /* Aún más pequeño en móviles */
   }
 }
->>>>>>> Stashed changes
 
 .apartados {
   margin: 7rem 0;

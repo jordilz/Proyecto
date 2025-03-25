@@ -743,7 +743,7 @@ body {
     font-size: 0.9em;
   }
 
-  .visually-hidden {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -755,3 +755,10 @@ body {
     border: 0;
   }
   
+#confirmacion {
+    color: #d86a2f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    display: none; 
+  }

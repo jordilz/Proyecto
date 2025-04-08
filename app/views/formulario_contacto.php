@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KŌDO NYŪSU</title>
-  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/Proyecto/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,8 +17,8 @@
   <header class="header">
     <div class="contenedor">
       <div class="barra">
-        <a class="logo" href="../../index.html">
-          <h1 class="logo_nombre"><span><img class="logo_img" src="../../img/icono_logo.png" alt="logo pagina"></span>KŌDO
+        <a class="logo" href="/Proyecto/index.php">
+          <h1 class="logo_nombre"><span><img class="logo_img" src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO
             NYŪSU</h1>
         </a>
         <div class="buscador">
@@ -29,10 +29,10 @@
         </div>
         <div class="navegacion">
           <a href="#" class="navegacion_enlace">
-            <img class="navegacion_enlace_carrito" src="../../img/icono_carrito_blanco.png" alt="icono carrito">
+            <img class="navegacion_enlace_carrito" src="/Proyecto/public/img/icono_carrito_blanco.png" alt="icono carrito">
           </a>
           <a href="#" class="navegacion_enlace">
-            <img class="navegacion_enlace_perfil" src="../../img/icono_usuario.png" alt="icono perfil">
+            <img class="navegacion_enlace_perfil" src="/Proyecto/public/img/icono_usuario.png" alt="icono perfil">
           </a>
         </div>
       </div>
@@ -41,7 +41,7 @@
 
   <div class="contacto_formulario">
     <div class="contacto_titulo">Contacta con nosotros:</div>
-    <form class="formulario" id="contactoForm">
+    <form class="formulario" id="contactoForm" method="POST" action="/Proyecto/public/index.php">
       <ul>
         <li>
           <label class="campo" for="nombre">Nombre</label>
@@ -60,16 +60,22 @@
         </li>
       </ul>
       <button type="submit" class="btn_enviar">Enviar</button>
-      <p id="confirmacion"></p>
+      <p id="confirmacion">
+        <?php
+          if (isset($_GET['message'])) {
+              echo htmlspecialchars($_GET['message']);
+          }
+        ?>
+      </p>
     </form>
   </div>
 
-  <script src="../../js/contacto.js"></script>
+  <script src="/Proyecto/public/js/contacto.js"></script>
 
   <footer class="footer">
     <div class="footer_terminos">
-      <p><a href="contacto.html">CONTACTA CON NOSOTROS</a></p>
-      <p><a href="index.html">TERMINOS Y CONDICIONES</a></p>
+      <p><a href="/Proyecto/app/views/formulario_contacto.php">CONTACTA CON NOSOTROS</a></p>
+      <p><a href="/Proyecto/index.php">TERMINOS Y CONDICIONES</a></p>
     </div>
   </footer>
 </body>

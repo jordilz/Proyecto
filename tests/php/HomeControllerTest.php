@@ -1,18 +1,63 @@
 <?php
+
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../../controllers/HomeController.php';
+require_once __DIR__ . '/../../app/controllers/HomeController.php';
 
 class HomeControllerTest extends TestCase
 {
     public function testIndexDoesNotThrowError()
     {
+        // Creamos una instancia de HomeController
         $controller = new HomeController();
         
-        ob_start(); // Evita que se impriman las vistas
+        // Usamos output buffering para evitar que la salida se imprima
+        ob_start();
+        
+        // Llamamos al método index
         $controller->index();
-        ob_end_clean();
+        
+        // Capturamos la salida generada por las vistas
+        $output = ob_get_clean();
 
-        $this->assertTrue(true); // Si llega aquí, no hubo errores
+        // Verificamos que la salida no esté vacía (es decir, que las vistas hayan sido cargadas)
+        $this->assertNotEmpty($output, "Las vistas no se cargaron correctamente.");
+    }
+
+    public function testIndexIncludesHeaderView()
+    {
+        // Creamos una instancia de HomeController
+        $controller = new HomeController();
+
+        // Usamos output buffering
+        ob_start();
+        
+        // Llamamos al método index
+        $controller->index();
+
+        // Capturamos la salida generada por las vistas
+        $output = ob_get_clean();
+
+        // Verificamos que la vista header.php fue incluida
+        $this->assertStringContainsString('header', $output, "La vista 'header.php' no fue cargada.");
+    }
+
+    public function testIndexIncludesFooterView()
+    {
+        // Creamos una instancia de HomeController
+        $controller = new HomeController();
+
+        // Usamos output buffering
+        ob_start();
+        
+        // Llamamos al método index
+        $controller->index();
+
+        // Capturamos la salida generada por las vistas
+        $output = ob_get_clean();
+
+        // Verificamos que la vista footer.php fue incluida
+        $this->assertStringContainsString('footer', $output, "La vista 'footer.php' no fue cargada.");
     }
 }
+?>

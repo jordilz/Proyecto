@@ -1,7 +1,7 @@
 <main class="main">
     <div class="grid">
         <div class="seccion">
-            <a href="index.php">
+            <a href="tienda.php">
                 <div class="imagen-contenedor">
                     <img class="seccion_imagen" src="public/img/imagen_tienda.png" alt="imagen tienda">
                     <p class="seccion_texto">Tienda</p>
@@ -10,7 +10,7 @@
         </div>
 
         <div class="seccion">
-            <a href="index.php">
+            <a href="lomasvisto.php">
                 <div class="imagen-contenedor">
                     <img class="seccion_imagen" src="public/img/imagen_lomasvisto.png" alt="imagen tienda2">
                     <p class="seccion_texto">Lo más visto</p>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="seccion">
-            <a href="index.php">
+            <a href="actualidad.php">
                 <div class="imagen-contenedor">
                     <img class="seccion_imagen" src="public/img/imagen_actualidad.png" alt="imagen tienda3">
                     <p class="seccion_texto">Actualidad</p>

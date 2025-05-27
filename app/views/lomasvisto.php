@@ -3,6 +3,7 @@
 <div class="main">
     <div class="apartados">
         <h2 class="centrar-texto">Lo Más Visto</h2>
+        <p class="centrar-texto">¡Descubre las series más populares entre nuestros usuarios!</p>
     </div>
 
     <div class="most-viewed-grid">

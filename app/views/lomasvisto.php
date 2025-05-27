@@ -5,27 +5,81 @@
         <h2 class="centrar-texto">Lo Más Visto</h2>
     </div>
 
-    <div class="grid">
-        <div class="seccion">
-            <div class="imagen-contenedor">
-                <img class="seccion_imagen" src="public/img/serie1.jpg" alt="Serie 1">
-                <p class="seccion_texto">Serie A</p>
+    <div class="most-viewed-grid">
+        <a href="serie-a-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 1">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie A</h3>
+                    <p>Un joven débil que se convierte en un cazador legendario tras un despertar inesperado.</p>
+                </div>
             </div>
-        </div>
+        </a>
 
-        <div class="seccion">
-            <div class="imagen-contenedor">
-                <img class="seccion_imagen" src="public/img/serie1.jpg" alt="Serie 2">
-                <p class="seccion_texto">Serie B</p>
+        <a href="serie-b-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 2">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie B</h3>
+                    <p>Continúa su viaje enfrentando desafíos épicos y desbloqueando nuevos poderes.</p>
+                </div>
             </div>
-        </div>
+        </a>
 
-        <div class="seccion">
-            <div class="imagen-contenedor">
-                <img class="seccion_imagen" src="public/img/serie1.jpg" alt="Serie 3">
-                <p class="seccion_texto">Serie C</p>
+        <a href="serie-c-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 3">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie C</h3>
+                    <p>La batalla final contra las fuerzas oscuras que amenazan su mundo.</p>
+                </div>
             </div>
-        </div>
+        </a>
+        <a href="serie-c-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 3">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie C</h3>
+                    <p>La batalla final contra las fuerzas oscuras que amenazan su mundo.</p>
+                </div>
+            </div>
+        </a>
+        <a href="serie-c-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 3">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie C</h3>
+                    <p>La batalla final contra las fuerzas oscuras que amenazan su mundo.</p>
+                </div>
+            </div>
+        </a>
+        <a href="serie-c-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 3">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie C</h3>
+                    <p>La batalla final contra las fuerzas oscuras que amenazan su mundo.</p>
+                </div>
+            </div>
+        </a>
+        <a href="serie-c-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 3">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie C</h3>
+                    <p>La batalla final contra las fuerzas oscuras que amenazan su mundo.</p>
+                </div>
+            </div>
+        </a>
+        <a href="serie-c-detalle.php" class="most-viewed-item">
+            <div class="most-viewed-image-container">
+                <img class="most-viewed-image" src="public/img/serie1.jpg" alt="Serie 3">
+                <div class="most-viewed-text">
+                    <h3>Solo Leveling - Serie C</h3>
+                    <p>La batalla final contra las fuerzas oscuras que amenazan su mundo.</p>
+                </div>
+            </div>
+        </a>
     </div>
 </div>
 

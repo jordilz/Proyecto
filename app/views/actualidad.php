@@ -1,29 +1,20 @@
-
-<div class="main">
-    <div class="apartados">
-        <h2 class="centrar-texto">Actualidad</h2>
-    </div>
-
-    <div class="grid">
-        <div class="seccion">
-            <div class="imagen-contenedor">
-                <img class="seccion_imagen" src="public/img/actualidad1.png" alt="Noticia 1">
-                <p class="seccion_texto">Lanzamiento esperado: Título X</p>
-            </div>
+<div class="news-section">
+        <div class="news-item">
+            <img src="noticia1.jpg" alt="Noticia 1">
+            <h2>Última Noticia noticia noticia noticia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="comment-button">Comentar</button>
         </div>
-
-        <div class="seccion">
-            <div class="imagen-contenedor">
-                <img class="seccion_imagen" src="public/img/actualidad1.png" alt="Noticia 2">
-                <p class="seccion_texto">Evento de desarrolladores anunciado</p>
-            </div>
+        <div class="news-item">
+            <img src="noticia1.jpg" alt="Noticia 1">
+            <h2>Última Noticia noticia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button class="comment-button">Comentar</button>
         </div>
-
-        <div class="seccion">
-            <div class="imagen-contenedor">
-                <img class="seccion_imagen" src="public/img/actualidad1.png" alt="Noticia 3">
-                <p class="seccion_texto">Actualización importante en Juego Y</p>
-            </div>
+        <div class="news-item">
+            <img src="noticia1.jpg" alt="Noticia 1">
+            <h2>Última Noticia noticia noticia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button class="comment-button">Comentar</button>
         </div>
     </div>
-</div>

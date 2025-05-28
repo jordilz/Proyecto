@@ -1,3 +1,5 @@
+<div class="espaciador"><p></p></div>
+
 <?php
 session_start();
 require_once __DIR__ . '/../../controllers/Conexion_Controller.php';

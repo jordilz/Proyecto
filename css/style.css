@@ -1252,3 +1252,8 @@ body {
   color: var(--blanco);
   font-size: 1.8rem;
 }
+
+
+.espaciador p{
+  margin-top: 10%;
+}

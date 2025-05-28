@@ -1352,6 +1352,8 @@ body {
 }
 .news-item h2{
  color: var(--primario);
+ text-decoration: solid;
+ font-size: 4rem;
 }
 form textarea {
   width:100%; /* ocupa todo el ancho del contenedor */

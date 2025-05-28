@@ -25,8 +25,8 @@
     <div class="contenedor">
       <div class="barra">
         <a class="logo" href="/Proyecto/index.php">
-          <h1 class="logo_nombre">
-            <span><img class="logo_img" src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO NYŪSU
+          <h1 class="logo_nombre fw-bold" >
+            <span><img class="logo_img"  src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO NYŪSU
           </h1>
         </a>
 
@@ -53,10 +53,10 @@
         
         <nav class="navegacion_principal">
           <ul class="navegacion_lista">
-            <li class="navegacion_item"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a></li>
-            <li class="navegacion_item"><a href="/Proyecto/tienda.php" class="navegacion_enlace">TIENDA</a></li>
-            <li class="navegacion_item"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS VISTO</a></li>
-            <li class="navegacion_item"><a href="/Proyecto/Actualidad.php" class="navegacion_enlace">ACTUALIDAD</a></li>
+            <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a></li>
+            <li class="navegacion_item fw-bold"><a href="/Proyecto/tienda.php" class="navegacion_enlace">TIENDA</a></li>
+            <li class="navegacion_item fw-bold"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS VISTO</a></li>
+            <li class="navegacion_item fw-bold"><a href="/Proyecto/Actualidad.php" class="navegacion_enlace">ACTUALIDAD</a></li>
           </ul>
         </nav>
       </div>

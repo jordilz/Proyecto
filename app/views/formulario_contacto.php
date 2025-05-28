@@ -18,8 +18,9 @@
     <div class="contenedor">
       <div class="barra">
         <a class="logo" href="/Proyecto/index.php">
-          <h1 class="logo_nombre"><span><img class="logo_img" src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO
-            NYŪSU</h1>
+          <h1 class="logo_nombre">
+            <span><img class="logo_img" src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO NYŪSU
+          </h1>
         </a>
         <div class="buscador">
           <form class="buscador_formulario" method="get">

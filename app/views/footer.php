@@ -2,7 +2,7 @@
     <div class="contacto">
         <ul class="contacto_lista">
             <li>
-                <h1 class="logo_nombre">KŌDO NYŪSU</h1>
+                <h1 class="logo_nombre fw-bold">KŌDO NYŪSU</h1>
             </li>
             <li>
                 <p class="campo">Teléfono de contacto:</p>

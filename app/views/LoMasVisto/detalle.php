@@ -1,10 +1,11 @@
-<?php include __DIR__ . '/header.php'; ?>
+<?php include __DIR__ . '/../Layouts/header.php'; ?>
+
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once __DIR__ . '/../controllers/Conexion_Controller.php';
+require_once __DIR__ . '/../../controllers/Conexion_Controller.php';
 
 $conexionController = new ConexionController();
 $conexion = $conexionController->conectar();
@@ -135,8 +136,10 @@ if ($comentarios->num_rows > 0) {
         <p><a href="../usuarios/login.php">Inicia sesión</a> para comentar.</p>
     <?php endif; ?>
 
-    <a href="/Proyecto/lomasvisto.php" class="btn btn-secondary mb-4">Volver a series</a>
+    <a href="/Proyecto/index.php?url=LoMasVisto/index" class="btn btn-secondary mb-4">Volver a series</a>
+
+    
 
 </div>
 
-<?php include __DIR__ . '/footer.php'; ?>
+<?php include __DIR__ . '/../Layouts/footer.php'; ?>

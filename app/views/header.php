@@ -55,8 +55,7 @@
           <ul class="navegacion_lista">
             <li class="navegacion_item"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a></li>
             <li class="navegacion_item"><a href="/Proyecto/tienda.php" class="navegacion_enlace">TIENDA</a></li>
-            <li class="navegacion_item"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS VISTO</a>
-            </li>
+            <li class="navegacion_item"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS VISTO</a></li>
             <li class="navegacion_item"><a href="/Proyecto/Actualidad.php" class="navegacion_enlace">ACTUALIDAD</a></li>
           </ul>
         </nav>

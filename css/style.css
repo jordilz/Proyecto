@@ -192,16 +192,25 @@ body {
     display: flex;
     gap: 20px;
     position: fixed;
-    top: 6rem;
+    top: 6.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10001;
     font-family: var(--fuentePrincipal);
   }
 
-  .navegacion_item a {
+  .navegacion_enlace {
+    font-size: 1.2rem;
+    transition: font-size 0.2s ease, transform 0.2s ease;
+    display: inline-block;
     color: var(--primario);
   }
+
+  .navegacion_enlace:hover {
+    font-size: 1.5rem;
+    transform: scale(1.1);
+  }
+
 
 }
 
@@ -333,6 +342,11 @@ body {
 
 }
 
+@media (max-width: 767px) {
+  .navegacion_principal {
+    display: none;
+  }
+}
 
 
 /* Estilos básicos para el div contacto */

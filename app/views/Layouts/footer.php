@@ -20,7 +20,7 @@
     </div>
     
     <div class="footer_terminos">
-        <p><a href="/Proyecto/app/views/formulario_contacto.php">CONTACTA CON NOSOTROS</a></p>
+        <p><a href="index.php?url=FormularioContacto/index">CONTACTA CON NOSOTROS</a></p>
         <p><a href="/Proyecto/index.php">TÉRMINOS Y CONDICIONES</a></p>
     </div>
 </footer>

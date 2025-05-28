@@ -59,11 +59,11 @@
             <ul class="navegacion_lista">
               <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a>
               </li>
-              <li class="navegacion_item fw-bold"><a href="/Proyecto/tienda.php" class="navegacion_enlace">TIENDA</a>
+              <li class="navegacion_item fw-bold"><a href="index.php?url=tienda/index" class="navegacion_enlace">TIENDA</a>
               </li>
-              <li class="navegacion_item fw-bold"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS
+              <li class="navegacion_item fw-bold"><a href="index.php?url=LoMasVisto/index" class="navegacion_enlace">LO MÁS
                   VISTO</a></li>
-              <li class="navegacion_item fw-bold"><a href="/Proyecto/Actualidad.php"
+              <li class="navegacion_item fw-bold"><a href="index.php?url=Actualidad/index"
                   class="navegacion_enlace">ACTUALIDAD</a></li>
             </ul>
           </nav>

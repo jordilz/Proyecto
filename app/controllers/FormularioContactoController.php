@@ -1,10 +1,13 @@
 <?php
 
-class Formulario_Controller {
+class FormularioContactoController {
     public function index() {
-        // Incluir la vista del formulario de contacto
-        include 'app/views/formulario_contacto.php';
+        // Use __DIR__ to get the current directory of this file
+        include __DIR__ . '/../views/Layouts/header.php';
+        include __DIR__ . '/../views/FormularioContacto/index.php';
+        include __DIR__ . '/../views/Layouts/footer.php';
     }
+
 
     public function sendMessage($nombre, $correo, $mensaje) {
         // Aquí podrías guardar el mensaje en la base de datos o enviar un correo

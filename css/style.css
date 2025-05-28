@@ -930,7 +930,7 @@ body {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
-  width: 100%;
+  width: 300px;
   height: 450px; /* Altura fija para estabilidad */
   display: flex;
   flex-direction: column;
@@ -1020,6 +1020,84 @@ body {
     font-size: 12px;
   }
 }
+
+.cesta-titulo {
+    margin-top: 200px;
+}
+
+.centrado-texto {
+    text-align: center;
+}
+
+.total-cesta {
+  margin-top: 35px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.btn_eliminar {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn_eliminar:hover {
+    background-color: #ff3333;
+}
+
+.contenedor-cesta-inferior {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 5%;
+}
+.total-boton {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Alineación de los iconos del header */
+.iconos-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilo general para cada icono */
+.icono-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Iconos tamaño consistente */
+.icono-img {
+  width: 24px;
+  height: auto;
+}
+
+/* Contador del carrito */
+#contador-carrito {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
 
 /*actualidad*/
 

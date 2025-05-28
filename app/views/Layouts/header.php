@@ -38,15 +38,16 @@
           </form>
         </div>
 
-        <div class="navegacion">
-          <a href="#" class="navegacion_enlace">
-            <img class="navegacion_enlace_carrito" src="/Proyecto/public/img/icono_carrito_blanco.png"
-              alt="icono carrito">
-          </a>
-          <a href="#" class="navegacion_enlace">
-            <img class="navegacion_enlace_perfil" src="/Proyecto/public/img/icono_usuario.png" alt="icono perfil">
-          </a>
-        </div>
+      <div class="navegacion iconos-header">
+        <a href="index.php?url=Tienda/cesta" class="icono-header">
+          <img src="public/img/icono_carrito_blanco.png" alt="Carrito" class="icono-img">
+          <span id="contador-carrito">0</span>
+        </a>
+        <a href="#" class="icono-header">
+          <img src="/Proyecto/public/img/icono_usuario.png" alt="Usuario" class="icono-img">
+        </a>
+      </div>
+
         <!-- Checkbox oculto -->
         <input type="checkbox" class="menu-toggle-checkbox" id="menu-toggle" />
 
@@ -74,3 +75,8 @@
       </div>
 
   </header>
+
+<script src="public/js/script.js"></script>
+
+
+

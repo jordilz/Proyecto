@@ -1067,8 +1067,8 @@ body {
   max-width: 1200px;
 }
 
-.comment-button {
-  background-color: #ff4444;
+.formulario-button {
+  background-color:var(--primario);
   color: #fff;
   border: none;
   padding: 6px 12px;
@@ -1079,6 +1079,7 @@ body {
   transition: background-color 0.3s ease;
   align-self: flex-end;
 }
+
 
 .comment-button:hover {
   background-color: #9c2d2d;
@@ -1236,4 +1237,18 @@ body {
   .most-viewed-text p {
     font-size: 10px;
   }
+}
+
+/* formulario actualidad */
+.formulario-actualidad textarea,
+.formulario-actualidad_campo {
+  font-family: sans-serif;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.7rem;
+  border: 0.8px solid var(--black);
+  background-color: var(--grisTransparente);
+  color: var(--blanco);
+  font-size: 1.8rem;
 }

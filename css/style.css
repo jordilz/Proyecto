@@ -909,7 +909,6 @@ body {
 
 /* tienda */
 
-
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -918,6 +917,9 @@ body {
   width: 100%;
   box-sizing: border-box;
   margin-top: 150px;
+  max-width: 1600px; /* Límite máximo de ancho para la cuadrícula */
+  margin-left: auto;
+  margin-right: auto; /* Centra la cuadrícula */
 }
 
 .game-card {
@@ -928,12 +930,26 @@ body {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
+  width: 100%;
+  height: 450px; /* Altura fija para estabilidad */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .game-card img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  height: 70%; /* Proporción fija para la imagen */
+  object-fit: cover;
+  display: block;
+}
+
+.game-card .content {
+  height: 30%; /* Espacio fijo para el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .discount {

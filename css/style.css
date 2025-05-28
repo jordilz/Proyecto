@@ -143,18 +143,16 @@ body {
     justify-content: center;
   }
 
+
   .navegacion_enlace {
-    font-size: 2rem;
-  }
-  .navegacion_enlace {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     transition: font-size 0.2s ease, transform 0.2s ease;
     display: inline-block;
     color: var(--primario);
   }
 
   .navegacion_enlace:hover {
-    font-size: 1.5rem;
+    font-size: 2rem;
     transform: scale(1.1);
   }
 

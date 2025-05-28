@@ -1,3 +1,4 @@
+<div class="espaciador"><p></p></div>
 <?php include __DIR__ . '/../Layouts/header.php'; ?>
 
 <?php
@@ -60,7 +61,8 @@ if (!$serie) {
     </div>
 
     <hr>
-    <h4>Comentarios</h4>
+    <h4 class="text-white">Comentarios</h4>
+
 
     <?php
     // Media de puntuaciones
@@ -83,62 +85,79 @@ if (!$serie) {
     } else {
         echo "<p><strong>Valoración:</strong> Sin valorar aún</p>";
     }
+
+    // Comentarios
+    $stmt = $conexion->prepare("
+        SELECT c.contenido, c.puntuacion, c.fechaPublicacion, u.nombre 
+        FROM comentario c 
+        JOIN usuario u ON c.usuarioID = u.id 
+        WHERE c.serieID = ? 
+        ORDER BY c.fechaPublicacion DESC
+    ");
+    $stmt->bind_param("i", $id_serie);
+    $stmt->execute();
+    $comentarios = $stmt->get_result();
     ?>
 
-<?php
-// Comentarios
-$stmt = $conexion->prepare("
-    SELECT c.contenido, c.puntuacion, c.fechaPublicacion, u.nombre 
-    FROM comentario c 
-    JOIN usuario u ON c.usuarioID = u.id 
-    WHERE c.serieID = ? 
-    ORDER BY c.fechaPublicacion DESC
-");
-$stmt->bind_param("i", $id_serie);
-$stmt->execute();
-$comentarios = $stmt->get_result();
-
-if ($comentarios->num_rows > 0) {
-    while ($comentario = $comentarios->fetch_assoc()) {
-        echo "<div class='card mb-2' style='background-color: #f9f9f9; color: #212529;'>";
-        echo "<div class='card-body'>";
-        echo "<h6 class='card-subtitle mb-1' style='color: #212529;'>" . htmlspecialchars($comentario['nombre']) . " – Puntuación: " . $comentario['puntuacion'] . "/5</h6>";
-        echo "<p class='card-text' style='color: #212529;'>" . nl2br(htmlspecialchars($comentario['contenido'])) . "</p>";
-        echo "<small style='color: #212529;'>" . $comentario['fechaPublicacion'] . "</small>";
-        echo "</div></div>";
-    }
-} else {
-    echo "<p>No hay comentarios aún.</p>";
-}
-?>
-
+    <div class="mt-4">
+        <?php if ($comentarios->num_rows > 0): ?>
+            <?php while ($comentario = $comentarios->fetch_assoc()): ?>
+                <?php
+                    $puntuacion = (int)$comentario['puntuacion'];
+                    $estrellas = str_repeat("⭐", $puntuacion) . str_repeat("☆", 5 - $puntuacion);
+                ?>
+                <div class="card mb-4 text-white" style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="fw-bold mb-0"><?php echo htmlspecialchars($comentario['nombre']); ?></h6>
+                            <span class="small text-warning"><?php echo $estrellas; ?></span>
+                        </div>
+                        <p class="mb-2"><?php echo nl2br(htmlspecialchars($comentario['contenido'])); ?></p>
+                        <div class="text-end">
+                            <small class="text-white-50"><?php echo $comentario['fechaPublicacion']; ?></small>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <div class="alert alert-secondary text-center text-white" style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">
+                No hay comentarios aún. ¡Sé el primero en opinar!
+            </div>
+        <?php endif; ?>
+    </div>
 
     <?php echo $mensaje; ?>
 
     <?php if (isset($_SESSION['usuario_id'])): ?>
-    <form method="POST" class="mb-4">
-        <div class="mb-3">
-            <label for="texto" class="form-label">Añade un comentario:</label>
-            <textarea name="texto" class="form-control" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="puntuacion" class="form-label">Puntuación (1 a 5):</label>
-            <select name="puntuacion" class="form-select" required>
-                <option value="">Selecciona...</option>
-                <?php for ($i = 1; $i <= 5; $i++): ?>
-                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                <?php endfor; ?>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar comentario</button>
-    </form>
-    <?php else: ?>
-        <p><a href="../usuarios/login.php">Inicia sesión</a> para comentar.</p>
-    <?php endif; ?>
+        <form method="POST" class="mb-4 mt-4" style="background-color: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); color: white;">
+            <div class="mb-3">
+                <label for="texto" class="form-label">Añade un comentario:</label>
+                <textarea name="texto" class="form-control" required style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: white;"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="puntuacion" class="form-label">Puntuación (1 a 5):</label>
+                <select name="puntuacion" class="form-select" required style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: white;">
+                    <option value="">Selecciona...</option>
+                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php endfor; ?>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar comentario</button>
+        </form>
+ <?php else: ?>
+    <p><a href="../usuarios/login.php" class="text-primary">Inicia sesión</a> para comentar.</p>
+<?php endif; ?>
 
-    <a href="/Proyecto/index.php?url=LoMasVisto/index" class="btn btn-secondary mb-4">Volver a series</a>
 
-    
+<div class="d-flex justify-content-center">
+  <a 
+    href="/Proyecto/index.php?url=LoMasVisto/index" 
+    class="btn text-white fw-bold mb-4" 
+    style="height: 40px; background-color: var(--primario); border-radius: 0; font-size: 2rem; padding: 0 2rem;">
+    Volver a series
+  </a>
+</div>
 
 </div>
 

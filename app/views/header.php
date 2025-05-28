@@ -25,8 +25,8 @@
     <div class="contenedor">
       <div class="barra">
         <a class="logo" href="/Proyecto/index.php">
-          <h1 class="logo_nombre fw-bold" >
-            <span><img class="logo_img"  src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO NYŪSU
+          <h1 class="logo_nombre fw-bold">
+            <span><img class="logo_img" src="/Proyecto/public/img/icono_logo.png" alt="logo pagina"></span>KŌDO NYŪSU
           </h1>
         </a>
 
@@ -47,20 +47,30 @@
             <img class="navegacion_enlace_perfil" src="/Proyecto/public/img/icono_usuario.png" alt="icono perfil">
           </a>
         </div>
-      </div>
+        <!-- Checkbox oculto -->
+        <input type="checkbox" class="menu-toggle-checkbox" id="menu-toggle" />
 
-      <div id="nav-principal" class="navegacion_principal">
-        
-        <nav class="navegacion_principal">
-          <ul class="navegacion_lista">
-            <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a></li>
-            <li class="navegacion_item fw-bold"><a href="/Proyecto/tienda.php" class="navegacion_enlace">TIENDA</a></li>
-            <li class="navegacion_item fw-bold"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS VISTO</a></li>
-            <li class="navegacion_item fw-bold"><a href="/Proyecto/Actualidad.php" class="navegacion_enlace">ACTUALIDAD</a></li>
-          </ul>
-        </nav>
-      </div>
+        <!-- Botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle">&#9776;</label>
 
-    </div>
+        <!-- Menú desplegable -->
+        <div id="nav-principal" class="navegacion_principal">
+          <nav class="navegacion_menu">
+            <ul class="navegacion_lista">
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a>
+              </li>
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/tienda.php" class="navegacion_enlace">TIENDA</a>
+              </li>
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/lomasvisto.php" class="navegacion_enlace">LO MÁS
+                  VISTO</a></li>
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/Actualidad.php"
+                  class="navegacion_enlace">ACTUALIDAD</a></li>
+            </ul>
+          </nav>
+        </div>
+
+
+
+      </div>
 
   </header>

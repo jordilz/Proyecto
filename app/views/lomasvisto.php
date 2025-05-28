@@ -1,5 +1,3 @@
-<?php include 'app/views/header.php'; ?>
-
 <div class="main">
     <div class="apartados">
         <h2 class="centrar-texto">Lo Más Visto</h2>

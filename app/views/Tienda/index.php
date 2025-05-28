@@ -15,7 +15,7 @@ $resultado = $conexion->query($sql);
             <div class="discount"><?= htmlspecialchars($juego['descuento']) ?>%</div>
             <h3><?= htmlspecialchars($juego['nombre']) ?></h3>
             <p><?= number_format($juego['precio'], 2) ?> €</p>
-            <button class="buy-button">Añadir a la cesta</button>
+            <button onclick="añadirACarrito('<?= $juego['nombre'] ?>', <?= $juego['precio'] ?>, '<?= $juego['imagen'] ?>')" class="buy-button">Añadir a la cesta</button>
         </div>
     <?php endwhile; ?>
 </div>

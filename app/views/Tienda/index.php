@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../controllers/Conexion_Controller.php';
+require_once __DIR__ . '/../../controllers/Conexion_Controller.php';
 
 $conexionController = new ConexionController();
 $conexion = $conexionController->conectar();

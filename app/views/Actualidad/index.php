@@ -43,40 +43,31 @@
     </div>
 </div>
 
-<script>
-document.querySelectorAll('.formulario-button').forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        const form = btn.nextElementSibling;
-        form.style.display = form.style.display === 'none' ? 'block' : 'none';
-    });
-});
-</script>
 
 
 <?php
-//conexion base de datos
+// Conexión base de datos
 require_once 'controllers/ConexionController.php';
 
 class ComentariosController {
     public function guardar() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $contenido = $_POST['comentario'] ?? '';
-            $serieID = $_POST['serie_id'] ?? null;
-            $usuarioID = null; // Usa sesión si estás logueando usuarios
             $fecha = date('Y-m-d');
 
             if (!empty(trim($contenido))) {
                 $conexion = (new ConexionController())->conectar();
 
-                $stmt = $conexion->prepare("INSERT INTO comentarios (usuarioID, contenido, fechaPublicacion, serieID) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param("issi", $usuarioID, $contenido, $fecha, $serieID);
+                $stmt = $conexion->prepare("INSERT INTO comentarios_actualidad (contenido, fechaPublicacion) VALUES (?, ?)");
+                $stmt->bind_param("ss", $contenido, $fecha);
 
                 if ($stmt->execute()) {
-                    header("Location: index.php?url=actualidad/index"); // Redirige donde necesites
+                    header("Location: index.php?url=actualidad/index");
                     exit();
                 } else {
                     echo "Error al guardar el comentario.";
                 }
+
                 $stmt->close();
                 $conexion->close();
             } else {

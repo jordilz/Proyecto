@@ -12,10 +12,11 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS (versión 5.3.0) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-W2g4Yp+jllwXHeJvs3J9L4rD4Eo0p5kHSpuFRw4x3sKQeG4HBa7UHLUfhvZmyY67" crossorigin="anonymous">
+
 
     <!-- Opcional: tu CSS personalizado -->
-    <link rel="stylesheet" href="/css/estilos.css">
+     <link rel="stylesheet" href="/css/estilos.css">
 </head>
 <body>
 

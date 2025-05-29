@@ -55,7 +55,12 @@ if (!$serie) {
         </div>
         <div class="col-md-8">
             <h2><?php echo htmlspecialchars($serie['titulo']); ?></h2>
-            <h6 class="text-muted"><?php echo htmlspecialchars($serie['productora']); ?></h6>
+                <p class="text-white fs-3">
+                    <strong>Productora:</strong> <?php echo htmlspecialchars($serie['productora']); ?>
+                </p>
+
+
+
             <p><?php echo nl2br(htmlspecialchars($serie['descripcion'])); ?></p>
         </div>
     </div>

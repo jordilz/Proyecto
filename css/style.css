@@ -1081,7 +1081,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
   width: 300px;
-  height: 450px; /* Altura fija para estabilidad */
+  height: 510px; /* Altura fija para estabilidad */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1089,7 +1089,7 @@ body {
 
 .game-card img {
   width: 100%;
-  height: 70%; /* Proporción fija para la imagen */
+  height: 75%; /* Proporción fija para la imagen */
   object-fit: cover;
   display: block;
 }

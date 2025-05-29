@@ -48,8 +48,8 @@ $rutaRedireccion = isset($_SESSION['usuario_id']) ? '/Proyecto/app/views/users/p
         
 
       <div class="navegacion iconos-header">
-        <a href="index.php?url=Tienda/cesta" class="icono-header">
-          <img src="public/img/icono_carrito_blanco.png" alt="Carrito" class="icono-img">
+        <a href="/Proyecto/index.php?url=Tienda/cesta" class="icono-header">
+          <img src="/Proyecto/public/img/icono_carrito_blanco.png" alt="Carrito" class="icono-img">
           <span id="contador-carrito">0</span>
         </a>
         <a href="#" class="navegacion_enlace" onclick="redirigirPerfil()">
@@ -70,11 +70,11 @@ $rutaRedireccion = isset($_SESSION['usuario_id']) ? '/Proyecto/app/views/users/p
             <ul class="navegacion_lista">
               <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php" class="navegacion_enlace">INICIO</a>
               </li>
-              <li class="navegacion_item fw-bold"><a href="index.php?url=tienda/index" class="navegacion_enlace">TIENDA</a>
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php?url=tienda/index" class="navegacion_enlace">TIENDA</a>
               </li>
-              <li class="navegacion_item fw-bold"><a href="index.php?url=LoMasVisto/index" class="navegacion_enlace">LO MÁS
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php?url=LoMasVisto/index" class="navegacion_enlace">LO MÁS
                   VISTO</a></li>
-              <li class="navegacion_item fw-bold"><a href="index.php?url=Actualidad/index"
+              <li class="navegacion_item fw-bold"><a href="/Proyecto/index.php?url=Actualidad/index"
                   class="navegacion_enlace">ACTUALIDAD</a></li>
             </ul>
           </nav>

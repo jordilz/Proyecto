@@ -37,7 +37,7 @@ class UsuarioModel
     public function registrar($nombre, $email, $password)
     {
         $hashed = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $this->conexion->prepare("INSERT INTO usuario (nombre, email, contraseña, fechaRegistro) VALUES (?, ?, ?, CURDATE())");
+        $stmt = $this->conexion->prepare("INSERT INTO usuario (nombre, email, contrasena, fechaRegistro) VALUES (?, ?, ?, CURDATE())");
         $stmt->bind_param("sss", $nombre, $email, $hashed);
         return $stmt->execute();
     }

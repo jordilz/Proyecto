@@ -1144,7 +1144,7 @@ body {
   padding: 2rem;
   display: flex;
   justify-content: flex-end;
-  margin-right: 2.7rem; /* Márgenes laterales */  
+  margin-right: 2.7rem;  
 }
 
 .total-boton {
@@ -1170,6 +1170,7 @@ body {
   color: #f57c00;
   text-decoration: none;
   font-weight: bold;
+  padding: 0px;
 }
 
 .mensaje-cesta-vacia .link-tienda:hover {

@@ -909,6 +909,32 @@ body {
 
 /* tienda */
 
+.toast-msg {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f57c00; 
+  color: white;
+  padding: 20px 40px; 
+  font-size: 1.5rem;
+  border-radius: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease, bottom 0.2s ease;
+  z-index: 9999;
+  pointer-events: none;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast-msg.show {
+  opacity: 1;
+  bottom: 110px;
+}
+
+
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1021,46 +1047,135 @@ body {
   }
 }
 
+/* Título de la cesta */
 .cesta-titulo {
-    margin-top: 200px;
+  margin-top: 150px; 
+  margin-bottom: 40px;
+  font-size: 4rem;
+  text-align: center;
 }
 
-.centrado-texto {
-    text-align: center;
+/* Lista de productos */
+.cesta-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 4rem; /* Márgenes laterales */
+}
+
+/* Cada producto */
+.cesta-item {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Imagen del producto */
+.cesta-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Info del producto */
+.cesta-item-info {
+  flex: 1;
+  font-size: 1.4rem;
+}
+
+.cesta-item-info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.cesta-item-info p {
+  margin: 0.6rem 0;
+  font-weight: bold;
+  color: #f57c00;
+  font-size: 1.5rem;
+}
+
+/* Botón eliminar */
+.cesta-item button {
+  background-color: #f57c00;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+  margin-right:40px;
+}
+
+.cesta-item button:hover {
+  background-color: #e06d00;
+}
+
+.botones-cesta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn_vaciar {
+  background: none;
+  border: none;
+  color: #f57c00;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 33px;
+}
+
+.btn_vaciar:hover {
+  color: #ffa63d;
+}
+
+
+/* Total + botón "comprar" */
+.contenedor-cesta-inferior {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2.7rem; /* Márgenes laterales */  
+}
+
+.total-boton {
+  text-align: right;
 }
 
 .total-cesta {
-  margin-top: 35px;
-    font-size: 2rem;
-    font-weight: normal;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-.btn_eliminar {
-    background-color: #b22222;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+.mensaje-cesta-vacia {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #ccc;
+  margin-top: 2rem;
+  line-height: 1.6;
 }
 
-.btn_eliminar:hover {
-    background-color: #ff3333;
+.mensaje-cesta-vacia .link-tienda {
+  color: #f57c00;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.contenedor-cesta-inferior {
-    display: flex;
-    justify-content: flex-end;
-    padding: 30px 5%;
+.mensaje-cesta-vacia .link-tienda:hover {
+  color: #ffa63d;
 }
-.total-boton {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+
 
 /* Alineación de los iconos del header */
 .iconos-header {

@@ -23,6 +23,7 @@
         <p><a href="index.php?url=FormularioContacto/index">CONTACTA CON NOSOTROS</a></p>
         <p><a href="/Proyecto/index.php">TÉRMINOS Y CONDICIONES</a></p>
     </div>
+    <div id="toast" class="toast-msg">Se ha añadido el juego a la cesta</div>
 </footer>
 
 <!-- Bootstrap JS cierre (tiene que estar así para el filtro de etiquetas)-->

@@ -1033,6 +1033,32 @@ body {
 
 /* tienda */
 
+.toast-msg {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f57c00; 
+  color: white;
+  padding: 20px 40px; 
+  font-size: 1.5rem;
+  border-radius: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease, bottom 0.2s ease;
+  z-index: 9999;
+  pointer-events: none;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast-msg.show {
+  opacity: 1;
+  bottom: 110px;
+}
+
+
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1054,7 +1080,7 @@ body {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
-  width: 100%;
+  width: 300px;
   height: 450px; /* Altura fija para estabilidad */
   display: flex;
   flex-direction: column;
@@ -1145,6 +1171,173 @@ body {
   }
 }
 
+/* Título de la cesta */
+.cesta-titulo {
+  margin-top: 150px; 
+  margin-bottom: 40px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* Lista de productos */
+.cesta-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 4rem; /* Márgenes laterales */
+}
+
+/* Cada producto */
+.cesta-item {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Imagen del producto */
+.cesta-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Info del producto */
+.cesta-item-info {
+  flex: 1;
+  font-size: 1.4rem;
+}
+
+.cesta-item-info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.cesta-item-info p {
+  margin: 0.6rem 0;
+  font-weight: bold;
+  color: #f57c00;
+  font-size: 1.5rem;
+}
+
+/* Botón eliminar */
+.cesta-item button {
+  background-color: #f57c00;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+  margin-right:40px;
+}
+
+.cesta-item button:hover {
+  background-color: #e06d00;
+}
+
+.botones-cesta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn_vaciar {
+  background: none;
+  border: none;
+  color: #f57c00;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 33px;
+}
+
+.btn_vaciar:hover {
+  color: #ffa63d;
+}
+
+
+/* Total + botón "comprar" */
+.contenedor-cesta-inferior {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2.7rem; /* Márgenes laterales */  
+}
+
+.total-boton {
+  text-align: right;
+}
+
+.total-cesta {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.mensaje-cesta-vacia {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #ccc;
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+.mensaje-cesta-vacia .link-tienda {
+  color: #f57c00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mensaje-cesta-vacia .link-tienda:hover {
+  color: #ffa63d;
+}
+
+
+/* Alineación de los iconos del header */
+.iconos-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilo general para cada icono */
+.icono-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Iconos tamaño consistente */
+.icono-img {
+  width: 24px;
+  height: auto;
+}
+
+/* Contador del carrito */
+#contador-carrito {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+
 /*actualidad*/
 
 .news-section {
@@ -1191,8 +1384,8 @@ body {
   max-width: 1200px;
 }
 
-.comment-button {
-  background-color: #ff4444;
+.formulario-button {
+  background-color:var(--primario);
   color: #fff;
   border: none;
   padding: 6px 12px;
@@ -1203,6 +1396,7 @@ body {
   transition: background-color 0.3s ease;
   align-self: flex-end;
 }
+
 
 .comment-button:hover {
   background-color: #9c2d2d;
@@ -1360,4 +1554,168 @@ body {
   .most-viewed-text p {
     font-size: 10px;
   }
+}
+
+/* formulario actualidad */
+.formulario-actualidad textarea,
+.formulario-actualidad_campo {
+  font-family: sans-serif;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.7rem;
+  border: 0.8px solid var(--black);
+  background-color: var(--grisTransparente);
+  color: var(--blanco);
+  font-size: 1.8rem;
+}
+
+
+.espaciador p{
+  margin-top: 10%;
+}
+/*seccion actualidad*/
+.news-section {
+  max-width: 1000rem; /* más ancho */
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: var(--negro);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.news-item {
+  margin-top: 15rem;
+  width: 100%;
+  background-color: var(--grisTransparente);
+}
+.news-item h2{
+ color: var(--primario);
+ text-decoration: solid;
+ font-size: 4rem;
+}
+form textarea {
+  width:100%; /* ocupa todo el ancho del contenedor */
+  min-height: 80px;
+  min-width: 30rem;
+  padding: 10px;
+  border: 2px solid var(--primario);
+  border-radius: 6px;
+  background-color: var(--grisTransparente);
+  color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+form textarea::placeholder {
+  color: var(--blanco); 
+}
+
+form textarea:focus {
+  border-color: var(--blanco);
+  outline: none;
+}
+
+form button {
+  margin: 10px auto 0 auto;
+  background-color: var(--primario);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: var(--blanco);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  display: block;
+}
+
+
+form button:hover {
+  background-color: #d36e20;
+  
+}
+
+.comentarios {
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.comentarios h3 {
+  color: var(--primario);
+  margin-bottom: 15px;
+  
+}
+.comentarios p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+
+
+
+.comentario {
+  background-color: var(--grisTransparente);
+  padding: 1px ;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  color: var(--blanco);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  width: 100%;
+  
+}
+
+.comentario small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--blanco);
+  opacity: 0.7;
+}
+
+.mensaje {
+  max-width: 800px;
+  margin: 5% auto 20px auto;
+  padding: 12px 20px;
+  background-color: var(--primario);
+  color: var(--blanco);
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+form textarea {
+  width:70rem; /* ocupa todo el ancho del contenedor */
+  min-height: 80px;
+  min-width: 30rem;
+  padding: 10px;
+  border: 2px solid var(--primario);
+  border-radius: 6px;
+  background-color: var(--grisTransparente);
+  color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+}
+.comentarios-scroll {
+  max-height: 400px; /* ajusta la altura como prefieras */
+  overflow-y: auto;
+  padding-right: 10px; /* para evitar que el scroll tape contenido */
+}
+
+.img-noticia {
+  width: 60%; /* ajusta el ancho relativo al contenedor */
+  max-width: 400px; /* ancho máximo fijo */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px auto 20px auto;
+  display: block; /* centra la imagen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--primario);
 }

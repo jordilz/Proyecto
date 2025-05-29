@@ -1,3 +1,10 @@
+<?php session_start(); ?>
+
+<?php if (isset($_SESSION['usuario_nombre'])): ?>
+    <h1 style="margin-top:150px; margin-left:100px;">Bienvenidx, <?= htmlspecialchars($_SESSION['usuario_nombre']); ?>!</h1>
+<?php endif; ?>
+
+
 <?php
 // Autocargar los controladores si estás usando múltiples archivos
 spl_autoload_register(function ($class) {

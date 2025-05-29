@@ -1,3 +1,11 @@
+<?php
+/* session_start(); // Obligatorio para acceder a $_SESSION */
+
+// Aquí ajusta esto según el nombre REAL de la variable de sesión que usas
+$rutaRedireccion = isset($_SESSION['usuario_id']) ? '/Proyecto/app/views/users/perfil.php' : '/Proyecto/app/views/users/login.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -43,9 +51,21 @@
             <img class="navegacion_enlace_carrito" src="/Proyecto/public/img/icono_carrito_blanco.png"
               alt="icono carrito">
           </a>
-          <a href="#" class="navegacion_enlace">
+
+
+          <a href="#" class="navegacion_enlace" onclick="redirigirPerfil()">
             <img class="navegacion_enlace_perfil" src="/Proyecto/public/img/icono_usuario.png" alt="icono perfil">
           </a>
+
+          <script>
+            function redirigirPerfil() {
+              // Redirige al valor determinado por PHP
+              window.location.href = "<?php echo $rutaRedireccion; ?>";
+            }
+          </script>
+
+
+
         </div>
         <!-- Checkbox oculto -->
         <input type="checkbox" class="menu-toggle-checkbox" id="menu-toggle" />
@@ -74,3 +94,6 @@
       </div>
 
   </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

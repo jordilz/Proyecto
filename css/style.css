@@ -223,6 +223,130 @@ body {
 
 }
 
+
+.menuUser {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 160px;
+  z-index: 9000;
+}
+
+.menuUser li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menuUser li a:hover {
+  background-color: #e0e0e0;
+}
+
+.loginContenedor {
+    max-width: 500px;
+    width: 90%;
+    margin: 80px auto;
+    margin-top: 200px;
+    margin-bottom: 250px;
+    padding: 40px;
+    background-color: #000; /* fondo negro */
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    color: #fff; /* textos blancos */
+    font-size: 1.2rem;
+}
+
+.loginContenedor h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.loginContenedor label {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.loginContenedor .form-control {
+    font-size: 1.1rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.loginContenedor .btn {
+    font-size: 2rem;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.loginContenedor a {
+    font-size: 1.5rem;
+    color: #0dcaf0;
+}
+
+@media (max-width: 576px) {
+    .loginContenedor {
+        padding: 25px;
+        font-size: 1rem;
+    }
+
+    .loginContenedor h2 {
+        font-size: 1.6rem;
+    }
+
+    .loginContenedor .btn {
+        font-size: 1.1rem;
+    }
+}
+
+.btn-naranja {
+    background-color: #ff6600;
+    color: black;
+    border: none;
+}
+
+.btn-naranja:hover {
+    background-color: #e65500;
+}
+
+.btn-negro {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-negro:hover {
+    background-color: #333;
+}
+
+.cuadro-perfil {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cuadro-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .barra {
   display: flex;
   align-items: center;

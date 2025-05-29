@@ -50,7 +50,7 @@ if (!$serie) {
     <div class="row">
         <div class="col-md-4">
             <?php if (!empty($serie['portada'])): ?>
-                <img src="/Proyecto/Pruebas/MyAppKodonyusu/uploads/<?php echo htmlspecialchars($serie['portada']); ?>" class='img-fluid mb-3'>
+                <img src="/Proyecto/public/img/series/<?php echo htmlspecialchars($serie['portada']); ?>" class='img-fluid mb-3'>
             <?php endif; ?>
         </div>
         <div class="col-md-8">
@@ -128,26 +128,37 @@ if (!$serie) {
 
     <?php echo $mensaje; ?>
 
-    <?php if (isset($_SESSION['usuario_id'])): ?>
-        <form method="POST" class="mb-4 mt-4" style="background-color: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); color: white;">
-            <div class="mb-3">
-                <label for="texto" class="form-label">Añade un comentario:</label>
-                <textarea name="texto" class="form-control" required style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: white;"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="puntuacion" class="form-label">Puntuación (1 a 5):</label>
-                <select name="puntuacion" class="form-select" required style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: white;">
-                    <option value="">Selecciona...</option>
-                    <?php for ($i = 1; $i <= 5; $i++): ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php endfor; ?>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar comentario</button>
-        </form>
- <?php else: ?>
-    <p><a href="../usuarios/login.php" class="text-primary">Inicia sesión</a> para comentar.</p>
+<?php if (isset($_SESSION['usuario_id'])): ?>
+    <form method="POST" class="mb-4 mt-4" style="background-color: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); color: white;">
+        <div class="mb-3">
+            <label for="texto" class="form-label" style="font-size: 1.80rem;">Añade un comentario:</label>
+            <textarea name="texto" class="form-control" required 
+                style="background-color: rgba(255,255,255,0.08); 
+                       border: 1px solid rgba(255,255,255,0.2); 
+                       color: var(--blanco);"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="puntuacion" class="form-label" style="font-size: 1.80rem;">Puntuación (1 a 5):</label>
+            <select name="puntuacion" class="form-select" required 
+                style="background-color: rgba(255,255,255,0.08); 
+                       border: 1px solid rgba(255,255,255,0.2); 
+                       color: var(--grisClaro);">
+                <option value="">Selecciona...</option>
+                <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                <?php endfor; ?>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary"
+    style="font-size: 1.1rem; padding: 10px 24px; border-radius: 8px;">
+    Enviar comentario
+</button>
+
+    </form>
+<?php else: ?>
+    <p><a href="/Proyecto/app/views/users/login.php" class="text-primary">Inicia sesión</a> para comentar.</p>
 <?php endif; ?>
+
 
 
 <div class="d-flex justify-content-center">

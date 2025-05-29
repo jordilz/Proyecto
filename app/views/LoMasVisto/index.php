@@ -1,7 +1,7 @@
 <div class="espaciador"><p></p></div>
 
 <?php
-session_start();
+//session_start();
 require_once __DIR__ . '/../../controllers/Conexion_Controller.php';
 
 $conexionController = new ConexionController();
@@ -142,7 +142,7 @@ $result = $stmt->get_result();
         <div class="card h-100 text-white" style="background-color: var(--grisTransparente); border: none;">
 
             <?php if (!empty($serie['portada'])): ?>
-                <img src="/Proyecto/Pruebas/MyAppKodonyusu/uploads/<?php echo htmlspecialchars($serie['portada']); ?>" 
+                <img src="/Proyecto/public/img/series/<?php echo htmlspecialchars($serie['portada']); ?>" 
                      class="card-img-top" 
                      style="height: 400px; object-fit: cover;">
             <?php else: ?>
@@ -185,7 +185,7 @@ $result = $stmt->get_result();
 
                 <!-- Descripción -->
                 <p class="card-text fs-4 mb-1">
-                    <?php echo htmlspecialchars(substr($serie['descripcion'], 0, 160)); ?>...
+                    <?php echo htmlspecialchars(substr($serie['descripcion'], 0, 260)); ?>...
                 </p>
 
                 <!-- Botón naranja más alto -->

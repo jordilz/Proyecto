@@ -22,10 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($usuarioModel->existeEmail($email)) {
         $_SESSION['mensaje'] = "<div class='alert alert-warning'>Correo ya registrado.</div>";
     } elseif ($usuarioModel->registrar($nombre, $email, $password)) {
-        // Obtener los datos insertados
         $usuario = $usuarioModel->obtenerUsuarioPorEmail($email);
 
-        // Crear sesión automáticamente
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['usuario_nombre'] = $usuario['nombre'];
 

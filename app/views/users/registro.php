@@ -11,7 +11,7 @@ unset($_SESSION['mensaje']);
 
     <?php echo $mensaje; ?>
 
-    <form method="POST" action="../../controllers/registroController.php" class="needs-validation" novalidate>
+    <form method="POST" action="../../controllers/registroController.php" class="needs-validation">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre:</label>
             <input type="text" name="nombre" class="form-control" required>

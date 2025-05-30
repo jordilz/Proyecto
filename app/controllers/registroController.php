@@ -33,6 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['mensaje'] = "<div class='alert alert-danger'>Error al registrar. Inténtalo de nuevo.</div>";
     }
 
-    header("Location: ../views/usuarios/registro.php");
+    header("Location: ../views/users/registro.php");
     exit;
 }
